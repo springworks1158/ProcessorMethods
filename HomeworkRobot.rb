@@ -7,16 +7,6 @@ END {
 	puts "Part 1: First in Last Out Method"	
 	solve([proc1, proc2, proc3], 1)
 	
-	puts "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
-	puts "Positives: It responds first to user most recent"
-	puts "command instead of the command the user issued a" 
-	puts "while ago"
-	puts "Negatives: First tasks take forever to complete"
-
-	puts "=> first things had worst throughput"
-	puts "=> last things had best throughput"
-	puts "------------------------------------------------"
-	puts ""
 	#============================================Biggest First
 	proc1 = CProc.new(1, 5, 0)
 	proc2 = CProc.new(2, 10, 2)
@@ -37,15 +27,6 @@ END {
 	puts "Part 2b: Shortest First Method"
 	solve([proc1, proc2, proc3, proc4, proc5], 3)
 	
-	puts "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
-	puts "The average throughput on shortest first was"
-	puts "much lower on shortest first. Biggest first"
-	puts "did the biggest first, but made all the shorter"
-	puts "processes take a long time. Shortest first did"
-	puts "the shortest first, but the longer processes"
-	puts "took much longer than their processing lengths."
-	puts "-------------------------------------------------"
-	puts ""
 	#============================================Round Robin n = 1
 	p1 = CProc.new(1, 6, 0)
 	p2 = CProc.new(2, 10, 2)
@@ -75,16 +56,6 @@ END {
 	
 	puts "Part 3c: Round Robin n = 5"
 	solve([p1, p2, p3, p4, p5], 4, 5)
-	
-	puts "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
-	puts "If a higher n value is used, shorter processes"
-	puts "will have a lower throughput. This will keep"
-	puts "the equality of round robin but get larger chunks"
-	puts "of processes done at once. It takes forever for"
-	puts "even a single medium-sized process to complete"
-	puts "in a round robin n = 1 method."
-	puts "-------------------------------------------------"
-	puts ""
 }
 
 
